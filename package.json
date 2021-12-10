@@ -15,7 +15,9 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "hof-build watch",
-    "test": "yarn run test:lint",
+    "debug": "hof-build watch",
+    "test": "yarn test:lint && yarn test:unit",
+    "test:unit": "_mocha \"test/_unit/**/*.test.js\"",
     "test:lint": "eslint . --config ./node_modules/eslint-config-hof/default.js",
     "test:snyk": "snyk config set api=SNYK_TOKEN && snyk test",
     "build": "hof-build",
@@ -30,7 +32,9 @@
     "hof": "^19.8.0",
     "jimp": "^0.16.1",
     "lodash": "^4.17.21",
+    "mocha": "^9.1.3",
     "moment": "^2.29.1",
+    "proxyquire": "^2.1.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

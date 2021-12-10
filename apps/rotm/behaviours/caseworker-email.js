@@ -30,6 +30,7 @@ const parse = (model, translate) => {
 };
 
 module.exports = settings => {
+  console.log('>>>>settings', settings);
   if (settings.transport !== 'stub' && !settings.from && !settings.replyTo) {
     // eslint-disable-next-line no-console
     console.warn('WARNING: Email `from` address must be provided. Falling back to stub email transport.');
