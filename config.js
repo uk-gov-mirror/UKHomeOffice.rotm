@@ -22,6 +22,7 @@ module.exports = {
     ttl: process.env.SESSION_TTL,
     name: process.env.SESSION_KEY
   },
+  sessionTimeOutWarning: process.env.SESSION_TIMEOUT_WARNING,
   redis: {
     port: process.env.REDIS_PORT,
     host: process.env.REDIS_HOST,

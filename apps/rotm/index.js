@@ -133,6 +133,7 @@ module.exports = {
     },
     '/confirmation': {
       backLink: false
-    }
+    },
+    '/session-timeout': {}
   }
 };
